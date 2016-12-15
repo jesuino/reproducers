@@ -10,4 +10,6 @@ buildNumber.properties
 .project
 .settings
 bin/
-*.bkp
+.attach_pid*
+*.log
+*.tlog
