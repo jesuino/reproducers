@@ -1,8 +1,8 @@
 package org.jboss.resteasy.reproducer;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-
 
 /**
  * @author wsiqueir
@@ -12,17 +12,14 @@ import javax.ws.rs.Path;
 public class TestResource {
 
 	@POST
+	@Consumes({ "application/xml", "application/json" })
 	public void test(Test test) {
 		System.out.println("test: " + test);
 	}
-	
-	
-	/**
-	 * adding this is not working as well
-	 */
+
 	@POST
 	public void test() {
 		System.out.println("test without body");
 	}
-	
+
 }
