@@ -41,7 +41,6 @@ public class KieServerClientSample {
 		// try to get a non existing task
 		taskClient.findTaskById(123456l);
 		
-		
 	}
 
 	private static void checkOrCreateContainer() {
