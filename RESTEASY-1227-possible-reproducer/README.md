@@ -1,3 +1,5 @@
+### Possible reproducer for resteasy 1227
+
 Deploy the war on EAP 7 directly if you trust me or you can build it again and deploy it.
 
 resteasy acts weirdly when we return an object and use the accept http header.
