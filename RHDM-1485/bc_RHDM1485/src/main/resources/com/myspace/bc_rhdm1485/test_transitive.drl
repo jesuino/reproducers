@@ -1,0 +1,8 @@
+package com.myspace.bc_rhdm1485;
+
+rule "test transitive"
+when 
+    dep: org.rhdm1485.TransitiveDepCl(name == "test" )
+then
+    System.out.println(dep.getName());
+end;
