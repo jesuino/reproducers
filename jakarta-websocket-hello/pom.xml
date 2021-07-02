@@ -18,29 +18,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.wildfly.quickstarts</groupId>
-        <artifactId>quickstart-parent</artifactId>
-        <!--
-        Maintain separation between the artifact id and the version to help prevent
-        merge conflicts between commits changing the GA and those changing the V.
-        -->
-        <version>25.0.0.Beta1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
+    <groupId>reproducers</groupId>
 
     <artifactId>websocket-hello</artifactId>
+    <version>1.0</version>
     <packaging>war</packaging>
-    <name>Quickstart: websocket-hello</name>
-    <description>This project demonstrates a simple Hello WebSocket application</description>
-
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
+  <properties>
+    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>11</maven.compiler.source>
+    <failOnMissingWebXml>false</failOnMissingWebXml>
+  </properties>
     <!--
     <dependencies>
         <dependency>
@@ -58,5 +45,7 @@
          <scope>provided</scope>
         </dependency>
     </dependencies>
-
+    <build>
+	    <finalName>websocket-hello</finalName>
+    </build>
 </project>
